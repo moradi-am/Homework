@@ -1,0 +1,48 @@
+% قالب فارسی مقالهٔ حل تمرین؛ با XeLaTeX و XePersian بسازید.
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,graphicx,booktabs,geometry,hyperref}
+\geometry{margin=25mm}
+\usepackage{xepersian}
+% نام قلم را مطابق فونت نصب‌شدهٔ محیط تنظیم کنید.
+\settextfont{Amiri}
+\setlatintextfont{Latin Modern Roman}
+\title{عنوان فارسی تمرین: حل و ارزیابی}
+\author{نام پژوهشگر}
+\date{تاریخ و نسخه}
+\begin{document}
+\maketitle
+\begin{abstract}
+هدف، روش، داده و مهم‌ترین نتیجهٔ واقعی را پس از اجرا در چند جمله گزارش کنید. نتیجهٔ فرضی ننویسید.
+\end{abstract}
+\noindent\textbf{واژگان کلیدی:} مسئله، روش عددی، اعتبارسنجی
+
+\section{صورت مسئله}
+منبع صورت سؤال، داده‌های معلوم، مجهولات، واحدها و دامنهٔ مسئله را بنویسید.
+\section{فرض‌ها و فرمول‌بندی}
+شرایط اولیه و مرزی و قرارداد نمادها را تعریف کنید. رابطهٔ زیر جای‌نگهدار است و باید حذف شود:
+\begin{equation}
+F(x)=0, \qquad x\in\Omega .
+\label{eq:placeholder}
+\end{equation}
+\section{روش حل و بازتولید}
+روش تحلیلی/عددی، پارامترها، نسخهٔ ابزار، معیار توقف و دستور اجرا را بنویسید.
+\section{نتایج}
+فقط پس از اجرای واقعی، جدول و شکل را با مقادیر واقعی وارد کنید. به هر کدام در متن ارجاع دهید.
+% نمونهٔ ساختار جدول:
+% \begin{table}[htbp]\centering
+% \caption{عنوان دقیق با واحدهای ستون‌ها}\label{tab:results}
+% \begin{tabular}{ll}\toprule کمیت & مقدار (واحد)\\\midrule ... & ...\\\bottomrule\end{tabular}
+% \end{table}
+% نمونهٔ شکل: \begin{figure}[htbp]\centering
+% \includegraphics[width=.85\linewidth]{../results/figures/figure-01.pdf}
+% \caption{عنوان، محورها، واحدها و شرایط تولید}\label{fig:result}\end{figure}
+\section{بحث و اعتبارسنجی}
+کنترل ابعادی، همگرایی/باقیمانده، مقایسه با مرجع مستقل در صورت وجود، خطا و محدودیت را تحلیل کنید.
+\section{پاسخ نهایی}
+به بندهای سؤال صریح و جداگانه پاسخ دهید.
+\section{منابع}
+منبع سؤال، روش و داده را با مشخصات قابل پیگیری ذکر کنید.
+\appendix
+\section{جزئیات تکمیلی}
+در صورت نیاز داده یا مشتق‌گیری طولانی را بیاورید.
+\end{document}
