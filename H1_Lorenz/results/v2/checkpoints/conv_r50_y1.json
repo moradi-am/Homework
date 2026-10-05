@@ -1,0 +1,43 @@
+{
+  "config_hash": "daa8fa4ad4c7462005e8a00a6262d0b3ec221d42229eae8f2f65c81aba49f4b5",
+  "protocol_hash": "7b460b9f5e230bab1ff5bedc0ff3f0fbf98492e6a04148e7c2334ec91c6db36c",
+  "code_hash": "70bfd686eb0d8931eacb485d3e49780c8e383798912d550f7656fd314a565a07",
+  "file_sha256": "e0b047f87393a55a21321d2f3890dd153fc5a87f0d7ba00222a6b68680a57e56",
+  "arrays": {
+    "t": {
+      "shape": [
+        1001
+      ],
+      "sha256": "be069d7d0c6719743ada6aed42916e2798ddc937afaa56bd63d766dcca764331"
+    },
+    "reference": {
+      "shape": [
+        1001,
+        3
+      ],
+      "sha256": "452d15bc725140e0eecb3ab4fb0e663adeff00128f5b7d08fbaf002f494e501a"
+    },
+    "reference_tight": {
+      "shape": [
+        1001,
+        3
+      ],
+      "sha256": "8ca5c17208cf1ffda42aad21f13649ced3676cf90f398a163c62814169fe15e4"
+    },
+    "euler": {
+      "shape": [
+        7,
+        1001,
+        3
+      ],
+      "sha256": "23beda4d3ab3bd006ae507b7dad6356ed7115d7673b29560e51852ecf152acde"
+    },
+    "historical_dt_0001": {
+      "shape": [
+        1001,
+        3
+      ],
+      "sha256": "c2f5d45e117a05a7092dae79be01e0ff5cdac116df9de61c39be05fb3cfbb1a3"
+    }
+  }
+}
