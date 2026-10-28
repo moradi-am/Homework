@@ -1,0 +1,89 @@
+% H3 Hiemenz — corrected question statement, XeLaTeX + xepersian
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=25mm}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xepersian}
+\settextfont{Vazirmatn}
+\setdigitfont{Vazirmatn}
+\usepackage{setspace}
+\setstretch{1.25}
+\begin{document}
+
+\begin{center}
+{\Large\bfseries صورت سؤال اصلاح‌شده\par}
+\vspace{1ex}
+{\large جریان نقطهٔ سکون هایمنز؛ حل تشابهی لایهٔ مرزی\par}
+\vspace{1ex}
+{\small درس لایهٔ مرزی · نسخهٔ اصلاح‌شدهٔ یادداشت دستی\par}
+\end{center}
+
+\noindent\textbf{یادداشت اصلاح:} این متن، نسخهٔ تمیز و اصلاح‌شدهٔ یادداشت
+دستی است. تنها اصلاحِ محتوایی، علامت فرمول‌های سرعت است (بخش ۴)؛ بقیهٔ
+فرمول‌ها همان یادداشت‌اند. در یادداشت، لزجت سینماتیکی با \lr{$\gamma$}
+نوشته شده است؛ از نظر بُعدی همان \lr{$\nu$} است.
+
+\section{مسئله}
+جریان پایا، دوبعدی و تراکم‌ناپذیرِ یک سیال لزج را روی یک صفحهٔ تخت در
+نظر بگیرید. دیوار روی \lr{$x_2=0$} است و جریان بیرونیِ نقطهٔ سکون،
+\lr{$U_e = a x_1$} با \lr{$a>0$} است؛ یعنی سرعت بیرونی با فاصله از نقطهٔ
+سکون خطی زیاد می‌شود. \lr{$x_1$} راستای مماس بر دیوار، \lr{$x_2$} راستای
+عمود بر دیوار، و \lr{$u_1$} و \lr{$u_2$} مؤلفه‌های سرعت در همین دو راستا
+هستند. لزجت سینماتیکی را \lr{$\gamma$} بگیرید.
+
+\section{متغیرهای بی‌بعد}
+طول مشخصه \lr{$\sqrt{\gamma/a}$} و سرعت مشخصه \lr{$\sqrt{\gamma a}$}
+هستند. متغیرهای بی‌بعد (با ستاره) چنین تعریف می‌شوند:
+\begin{equation}
+x_1^*, x_2^* = \frac{x_1, x_2}{\sqrt{\gamma/a}},
+\qquad
+u_1^*, u_2^* = \frac{u_1, u_2}{\sqrt{\gamma a}}.
+\end{equation}
+متغیر تشابهی، همان مختصهٔ بی‌بعدِ عمودی است:
+\lr{$\eta = x_2^*$}.
+
+\section{فرض تشابهی (قرارداد استاندارد)}
+فرض کنید سرعت‌ها فقط از راه یک تابعِ تک‌متغیرهٔ \lr{$F(\eta)$} بیان شوند:
+\begin{equation}
+u_1^* = x_1^*\, F'(\eta),
+\qquad
+u_2^* = -F(\eta),
+\qquad \eta = x_2^*.
+\end{equation}
+در اینجا \lr{$F'$} مشتق نسبت به \lr{$\eta$} است.
+
+\section{خواسته‌ها}
+\begin{enumerate}
+\item نشان دهید فرض بالا، معادلهٔ پیوستگیِ بی‌بعد،
+\lr{$\partial u_1^*/\partial x_1^* + \partial u_2^*/\partial x_2^* = 0$}،
+را برقرار می‌کند.
+\item با جای‌گذاری فرض بالا در معادلهٔ مومنتمِ لایهٔ مرزیِ بی‌بعد،
+\lr{$u_1^* \partial u_1^*/\partial x_1^* + u_2^* \partial u_1^*/\partial x_2^*
+= x_1^* + \partial^2 u_1^*/\partial {x_2^*}^2$}،
+معادلهٔ زیر را به دست آورید:
+\begin{equation}
+F''' + F F'' - (F')^2 + 1 = 0.
+\end{equation}
+\item شرایط مرزی زیر را بنویسید و هر یک را تفسیر کنید:
+\begin{equation}
+F(0) = 0, \qquad F'(0) = 0, \qquad F'(\infty) = 1.
+\end{equation}
+کدام شرط، چسبندگی و کدام‌یک، نفوذناپذیری دیوار است؟ شرط دوردست،
+چه می‌گوید؟
+\item معادلهٔ بالا را با شرایط مرزی داده‌شده به‌صورت عددی حل کنید و
+مقدار \lr{$F''(0)$} را گزارش کنید. این مقدار با چه کمیت فیزیکی‌ای
+(تنش برشی دیوار) متناسب است؟
+\end{enumerate}
+
+\section{اصلاح نسبت به یادداشت دستی}
+در یادداشت دستی، فرمول‌های سرعت با علامت برعکس آمده بودند:
+\lr{$u_2^* = F$} و \lr{$u_1^* = -x_1^* F'$}. آن دو با معادله و شرط
+دوردستِ بالا سازگار نیستند؛ با آن علامت‌ها، معادله
+\lr{$F''' - F F'' + (F')^2 - 1 = 0$} و شرط \lr{$F'(\infty) = -1$}
+به دست می‌آید. در این نسخه، قرارداد استانداردِ هایمنز گرفته شده است
+تا جواب با جدول‌های مرجع بخواند.
+
+\end{document}
