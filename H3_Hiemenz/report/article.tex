@@ -1,0 +1,173 @@
+% H3 Hiemenz solution — Persian article, XeLaTeX + xepersian
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=25mm}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xepersian}
+\settextfont{Vazirmatn}
+\setdigitfont{Vazirmatn}
+\usepackage{setspace}
+\setstretch{1.25}
+\begin{document}
+
+\begin{center}
+{\Large\bfseries حل جریان نقطهٔ سکون هایمنز\par}
+\vspace{1ex}
+{\large تبدیل تشابهی، استخراج معادله، و حل عددی\par}
+\vspace{1ex}
+{\small امیر مرادی\\
+درس لایهٔ مرزی · ۶ آبان ۱۴۰۵ / \lr{2026-10-28}\par}
+\end{center}
+
+\begin{center}{\large\bfseries چکیده}\end{center}
+جریان نقطهٔ سکون با فرض تشابهی به یک معادلهٔ دیفرانسیل معمولیِ مرتبهٔ سه
+تبدیل می‌شود: \lr{$F''' + F F'' - (F')^2 + 1 = 0$} با
+\lr{$F(0)=F'(0)=0$} و \lr{$F'(\infty)=1$}. حل عددیِ این مقاله، با قرارداد
+استانداردِ علامت، \lr{$F''(0)=1.2325876568$} و ضخامت جابه‌جاییِ بی‌بعد
+\lr{$\delta=0.64790047$} می‌دهد. همچنین نشان داده می‌شود که علامت‌های
+سرعت در یادداشت دستی با این معادله سازگار نبودند و اصلاح آن‌ها، همان
+قرارداد استاندارد است.
+
+\noindent\textbf{واژگان کلیدی:} هایمنز؛ نقطهٔ سکون؛ لایهٔ مرزی؛ حل تشابهی؛
+فالکنر--اسکن؛ تنش برشی دیوار.
+
+\section{جواب اول}
+با \lr{$\eta=x_2^*$}، سرعت‌های بی‌بعد چنین‌اند:
+\lr{$u_1^*=x_1^*F'(\eta)$} و \lr{$u_2^*=-F(\eta)$}، و \lr{$F$} جوابِ
+\lr{$F''' + F F'' - (F')^2 + 1 = 0$} با \lr{$F(0)=F'(0)=0$} و
+\lr{$F'(\infty)=1$} است. مهم‌ترین عددِ حل، \lr{$F''(0)=1.2325876568$}
+است که تنش برشی دیوار با آن متناسب است.
+
+\section{صورت مسئله و متغیرهای بی‌بعد}
+جریان پایا، دوبعدی و تراکم‌ناپذیر روی صفحهٔ تختِ \lr{$x_2=0$}، با جریان
+بیرونیِ \lr{$U_e=ax_1$}، \lr{$a>0$}، و لزجت سینماتیکیِ \lr{$\gamma$}
+(همان \lr{$\nu$} یادداشت) در نظر گرفته می‌شود. طول مشخصه
+\lr{$\sqrt{\gamma/a}$} و سرعت مشخصه \lr{$\sqrt{\gamma a}$}‌اند، پس:
+\begin{equation}
+x_1^*, x_2^* = \frac{x_1, x_2}{\sqrt{\gamma/a}},
+\qquad
+u_1^*, u_2^* = \frac{u_1, u_2}{\sqrt{\gamma a}}.
+\end{equation}
+در این مقیاس، معادلهٔ مومنتمِ لایهٔ مرزیِ بی‌بعد چنین می‌شود:
+\begin{equation}
+u_1^*\frac{\partial u_1^*}{\partial x_1^*}
++ u_2^*\frac{\partial u_1^*}{\partial x_2^*}
+= x_1^* + \frac{\partial^2 u_1^*}{\partial {x_2^*}^2},
+\label{eq:bl}
+\end{equation}
+که جملهٔ \lr{$x_1^*$} سمت راست، همان گرادیان فشارِ جریان بیرونیِ نقطهٔ
+سکون است.
+
+\section{پیوستگی و استخراج معادله}
+با فرض \lr{$u_1^*=x_1^*F'(\eta)$} و \lr{$u_2^*=-F(\eta)$}،
+\lr{$\eta=x_2^*$}:
+\begin{equation}
+\frac{\partial u_1^*}{\partial x_1^*} = F'(\eta),
+\qquad
+\frac{\partial u_2^*}{\partial x_2^*} = -F'(\eta),
+\end{equation}
+پس پیوستگی، \lr{$F'-F'=0$}، برقرار است. مشتق‌های لازم برای
+\eqref{eq:bl}:
+\begin{equation}
+\frac{\partial u_1^*}{\partial x_2^*} = x_1^*F''(\eta),
+\qquad
+\frac{\partial^2 u_1^*}{\partial {x_2^*}^2} = x_1^*F'''(\eta).
+\end{equation}
+جای‌گذاری در \eqref{eq:bl}:
+\begin{equation}
+x_1^*(F')^2 - x_1^*FF'' = x_1^* + x_1^*F''',
+\end{equation}
+و با تقسیم بر \lr{$x_1^*$} و مرتب‌سازی:
+\begin{equation}
+\boxed{\,F''' + FF'' - (F')^2 + 1 = 0\,}.
+\end{equation}
+جملهٔ \lr{$+1$}، همان جملهٔ گرادیان فشار است؛ بدون آن، معادلهٔ بلازیوس
+به دست می‌آید. به همین دلیل، این معادله، حالتِ \lr{$\beta=1$} معادلهٔ
+فالکنر--اسکن است.
+
+\section{شرایط مرزی}
+\begin{equation}
+F(0)=0, \qquad F'(0)=0, \qquad F'(\infty)=1.
+\end{equation}
+\lr{$F(0)=0$} یعنی \lr{$u_2^*=0$} روی دیوار: نفوذناپذیری.
+\lr{$F'(0)=0$} یعنی \lr{$u_1^*=0$} روی دیوار: چسبندگی.
+\lr{$F'(\infty)=1$} یعنی در دوردست، \lr{$u_1^*\to x_1^*$}، یعنی سرعت
+به سرعت جریان بیرونیِ \lr{$U_e=ax_1$} می‌رسد. معادله مرتبهٔ سه است و
+دقیقاً سه شرط دارد؛ پس مسئله خوش‌تعریف است و مجهولِ شوتینگ، فقط
+\lr{$F''(0)$} است.
+
+\section{روش عددی و اعتبارسنجی}
+به دستور استاد، حل با \textbf{رانگ--کوتای مرتبهٔ چهار} و روش شوتینگ
+انجام شد. کد، ساده و دانشجویی است و پلات ندارد: فقط با کتابخانهٔ
+استاندارد پایتون، \lr{$F''(0)$} را حدس می‌زند، با رانگ--کوتا تا
+\lr{$\eta=6$} جلو می‌رود، و با تنصیف در بازهٔ \lr{$[1.0,1.5]$} آن را
+چنان تنظیم می‌کند که \lr{$F'(6)=1$} شود. تا \lr{$\eta=6$}، مقدار
+\lr{$F'$} تا \lr{$10^{-8}$} به یک رسیده است، پس \lr{$\eta=6$} جانشین
+خوبی برای بی‌نهایت است.
+
+نکتهٔ عملی شوتینگ: برای حدس‌های دور از جواب، حلِ مقدار اولیه به‌صورت
+نمایی منفجر می‌شود، پس بازهٔ تنصیف را نباید خیلی باز گرفت؛ بازهٔ
+\lr{$[1.0,1.5]$} برای این مسئله کافی و پایدار است.
+
+اعتبارسنجی (پالایش گام):
+\begin{itemize}
+\item \lr{$h=0.02$}: \lr{$F''(0)=1.2325876554$}.
+\item \lr{$h=0.01$}: \lr{$F''(0)=1.2325876568$}.
+\item \lr{$h=0.005$}: \lr{$F''(0)=1.2325876569$}.
+\end{itemize}
+پس با ریز شدن گام، جواب تا حدود \lr{$10^{-9}$} پایدار است.
+
+\section{نتایج}
+
+\begin{table}[htbp]
+\centering
+\caption{نتایج واقعی اجرا (فایل \lr{\texttt{results/tables/metrics.json}})}
+\begin{tabular}{cccc}
+\toprule
+\lr{$\eta$} & \lr{$F$} & \lr{$F'$} & \lr{$F''$} \\
+\midrule
+0 & 0.00000000 & 0.00000000 & 1.23258766 \\
+0.5 & 0.13358522 & 0.49464929 & 0.75830748 \\
+1 & 0.45922702 & 0.77786527 & 0.39801295 \\
+2 & 1.36197416 & 0.97321674 & 0.06582538 \\
+3 & 2.35255667 & 0.99842416 & 0.00507796 \\
+4 & 3.35210930 & 0.99995843 & 0.00016867 \\
+6 & 5.35209953 & 1.00000000 & 0.00000001 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+در دوردست، \lr{$F\approx\eta-\delta$} با \lr{$\delta=0.64790047$}؛ پس
+ضخامت جابه‌جایی، \lr{$\delta^*=0.6479\sqrt{\gamma/a}$} است. سرعت مماسی
+در \lr{$\eta=1$} حدود ۷۸٪ سرعت بیرونی، و در \lr{$\eta=4$} عملاً برابر
+آن است؛ پس ضخامت لایهٔ مرزی، چند برابرِ \lr{$\sqrt{\gamma/a}$} است.
+تنش برشی دیوار:
+\begin{equation}
+\tau_w = \mu\left.\frac{\partial u_1}{\partial x_2}\right|_{x_2=0}
+= \rho\sqrt{\gamma a^3}\,x_1\,F''(0),
+\end{equation}
+یعنی با \lr{$x_1$} خطی زیاد می‌شود و ضریبش همان \lr{$1.2325876568$}
+است.
+
+\section{اصلاح علامت یادداشت دستی}
+در یادداشت دستی، \lr{$u_2^*=F$} و \lr{$u_1^*=-x_1^*F'$} آمده بود. آن دو،
+پیوستگی را هم برقرار می‌کنند، ولی در معادلهٔ لایهٔ مرزی،
+\lr{$F'''-FF''+(F')^2-1=0$} و شرط \lr{$F'(\infty)=-1$} می‌دهند، نه
+معادله و شرطِ بالا. در این مقاله، قرارداد استانداردِ هایمنز گرفته شده
+است تا جواب با جدول‌های مرجع بخواند؛ اگر قرارداد یادداشت حفظ شود،
+فقط علامت \lr{$F$} و \lr{$F''(0)$} برعکس می‌شود.
+
+\section{منابع}
+\begin{enumerate}
+\item \lr{Hiemenz, K. (1911). Die Grenzschicht an einem in den gleichf\"ormigen Fl\"ussigkeitsstrom eingetauchten geraden Kreiszylinder. Dinglers Polytechnisches Journal, 326, 321--324.}
+\item \lr{Schlichting, H., \& Gersten, K. Boundary-Layer Theory. Springer.}
+\item \lr{White, F. M. Viscous Fluid Flow. McGraw-Hill.}
+\item کد و نتایج این مقاله:
+\lr{\texttt{notebooks/hiemenz\_rk4.py}} (رانگ--کوتا، بدون پلات)،
+\lr{\texttt{results/tables/metrics.json}}.
+\end{enumerate}
+
+\end{document}
