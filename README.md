@@ -7,6 +7,7 @@
 | شناسه | دسته/عنوان | پوشه و پاسخ | پروتکل/کد | PDF مقاله | وضعیت |
 |---|---|---|---|---|---|
 | H1 | دستگاه‌های دینامیکی؛ دستگاه لورنز، همگرایی اویلر و لیاپانوف | [صورت مسئله، فرمول‌بندی و وضعیت پاسخ](H1_Lorenz/README.md) | [نوت‌بوک](H1_Lorenz/notebooks/Lorenz_H1_FULL_V2.ipynb) · [پروتکل V2](H1_Lorenz/protocols/H1_V2_frozen.md) | ساخته/تأیید نشده | در حال اجرا |
+| H2 | روش‌های عددی؛ روش پروجکشن (گام کسری) چورین، اثبات پواسون | [صورت مسئله، فرمول‌بندی و وضعیت پاسخ](H2_Projection-Method/README.md) | [کد](H2_Projection-Method/notebooks/projection_method.py) · [پروتکل](H2_Projection-Method/protocols/H2_frozen.md) | [solution.pdf](H2_Projection-Method/report/solution.pdf) | آمادهٔ بازبینی |
 
 برای تمرین بعدی یک پوشهٔ مستقل با [قالب README تمرین](templates/EXERCISE_README.md) و [قالب مقالهٔ فارسی LaTeX](templates/article.tex) بسازید و پس از تولید واقعی PDF، پیوند آن را در این جدول ثبت کنید. درخت استاندارد در پروتکل آمده است. پوشه‌های `question/`، `results/` و `report/` در H1 به محض آماده شدن محتوای معتبر اضافه می‌شوند.
 
